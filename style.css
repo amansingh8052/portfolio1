@@ -7,12 +7,21 @@
     scroll-behavior: smooth;
     font-family: "JetBrains Mono", monospace;
 }
-:root {
-    --mainbg : #333;
-    --bg: #585858;
-    --neutral: #fff;
-    --highlight : rgb(0, 248, 240);
-    --label : 14px;
+/* :root {
+  --mainbg: #ffffff;
+  --bg: #e0e0e0;
+  --neutral: #000;
+  --highlight: #0b5aae;
+  --label: 14px;
+  --textColor: #333;
+} */
+
+:root{
+  --mainbg: #333;
+  --bg: #585858;
+  --neutral: #fff;
+  --highlight: rgb(0, 248, 240);
+  --textColor: #fff;
 }
 body {
     background-color: var(--mainbg);
@@ -24,6 +33,9 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+p,h1,h2,h3 {
+  color: var(--textColor);
 }
 section {
     display: flex;
@@ -49,13 +61,14 @@ header {
   top: 0;
   width: 100%;
   max-width: 1000px;
-  background-color: #333;
-  color: white;
+  background-color: var(--bg);
+  color: var(--textColor);
   display: flex;
   align-items: center;
   justify-content: space-between;
   z-index: 1000;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  padding-left: 10px;
 }
 .logo {
   font-size: 30px;
@@ -69,7 +82,7 @@ nav {
 }
 
 nav a {
-  color: white;
+  color: var(--textColor);
   text-decoration: none;
   padding: 5px;
   position: relative;
@@ -90,6 +103,15 @@ nav a.active::after {
   transition: width 0.3s;
   width: 100%;
 }
+.menu-toggle {
+  display: none;
+  font-size: 26px;
+  background: none;
+  border: none;
+  color: var(--textColor);
+  cursor: pointer;
+}
+
 /* Hero Section Styling */
 .hero {
   height: max-content;
@@ -99,11 +121,12 @@ nav a.active::after {
   height: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   position: relative;
 }
 .content {
-  max-width: 50%;
+  max-width: 80%;
+  text-align: center;
 }
 .head{
   font-size: 2rem;
@@ -135,6 +158,7 @@ nav a.active::after {
   gap: 20px;
   height: 50px;
   align-items: center;
+  justify-content: center;
 }
 .social-links a {
   text-decoration: none;
@@ -155,6 +179,10 @@ nav a.active::after {
   width: 60%;
   height: 60%;
 }
+.social-links a img,
+.detailContainer .social img {
+  filter: brightness(0) saturate(50%) invert(16%) sepia(92%) saturate(74%) hue-rotate(356deg) brightness(102%) contrast(113%);
+}
 .stats {
   width: 100%;
   display: flex;
@@ -165,6 +193,8 @@ nav a.active::after {
   display: flex;
   align-items: center;
   gap: 5px;
+  color: var(--textColor);
+
 }
 #years, #totalProjects, #totalSkills {
   font-size: 4rem;
@@ -172,9 +202,15 @@ nav a.active::after {
 .myImg {
   width: 40%;
   height: 100%;
-  border: 2px solid var(--highlight);
+  /* border: 2px solid var(--highlight); */
   position: relative;
+  display: none;
   
+}
+.myImg img {
+ object-fit: cover;
+ width: 100%;
+ height: 100%;
 }
 /* Experience Section Styling */
 .experience {
@@ -230,12 +266,12 @@ nav a.active::after {
   border-radius: 5px;
   color: var(--highlight);
   padding: 5px 10px;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: var(--mainbg);
   display: none;
 }
-.skillOuter:hover::before {
+/* .skillOuter:hover::before {
   display: block;
-}
+} */
 .skillInner{
   width: 90%;
   height: 90%;
@@ -265,12 +301,12 @@ nav a.active::after {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     place-items: center; 
-    gap: 20px;
+    gap: 50px;
     height: max-content;
   }
   .slide {
     width: 100%;
-    height: 200px;
+    height: 180px;
     overflow: hidden;
     display: flex;
     gap: 10px;
@@ -286,7 +322,7 @@ nav a.active::after {
     display: flex;
     flex: 3;
     flex-direction: column;
-    gap: 8px;
+    gap: 15px;
   }
   .workImage {
     display: flex;
@@ -465,7 +501,7 @@ footer {
 }
 @media screen and (max-width: 1050px) {
   section {
-    max-width: 700px;
+    max-width: 730px;
   }
   header {
     max-width: 700px;
@@ -502,11 +538,23 @@ footer {
     width: 135px;
     height: 135px;
   }
-
+.work-container {
+  gap: 20px;
+}
+.work-container h3 {
+  font-size: 16px;
+}
+.work-container p {
+  font-size: 14px;
+}
+.workDetails {
+  gap: 10px;
+}
   .detailContainer .social {
     width: 50px;
     height: 50px;
   }
+
   .contactForm {
     width: 375px;
     padding: 10px;
@@ -534,6 +582,45 @@ footer {
  .sectionHeading {
   height: 40px;
  }
+ header {
+  height: 50px;
+ }
+ .logo {
+  font-size: 20px;
+}
+  nav {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background-color: var(--bg);
+    /* box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.15); */
+    padding: 15px;
+    border-radius: 0 0 5px 5px;
+    animation: slide 0.3s ease-in-out;
+  }
+  @keyframes slide {
+    0% {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  nav.show {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+    padding-right: 10px;
+  }
+
  .heroWrapper {
   height: max-content;
   padding-top: 5rem;
@@ -565,6 +652,9 @@ footer {
   width: 130px;
   height: 130px;
  }
+ .workDetails {
+  gap: 15px;
+}
  .work-container {
   grid-template-columns: repeat(1, 1fr);
 }

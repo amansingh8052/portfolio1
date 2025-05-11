@@ -8,16 +8,17 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header>
-      <a href="#home" class="logo">Portfolio.</a>
-      <nav>
-        <a href="#home" class="nav-link">Home</a>
-        <a href="#experience" class="nav-link">Experience</a>
-        <a href="#skills" class="nav-link">Skills</a>
-        <a href="#projects" class="nav-link">Projects</a>
-        <a href="#contact" class="nav-link">Contact</a>
-      </nav>
-    </header>
+   <header>
+  <a href="#home" class="logo">Portfolio.</a>
+  <button id="menu-toggle" class="menu-toggle">&#9776;</button>
+  <nav id="nav-menu">
+    <a href="#home" class="nav-link">Home</a>
+    <a href="#experience" class="nav-link">Experience</a>
+    <a href="#skills" class="nav-link">Skills</a>
+    <a href="#projects" class="nav-link">Projects</a>
+    <a href="#contact" class="nav-link">Contact</a>
+  </nav>
+</header>
     <section class="hero" id="home">
       <div class="heroWrapper">
         <div class="content">
@@ -41,6 +42,7 @@
                 ><img src="icons/gitHub copy.svg" alt=""
               /></a>
               <a target="_blank" href="https://www.behance.net/amansingh802"><img src="icons/behance.svg" alt=""></a>
+              <a target="_blank" href="https://www.geeksforgeeks.org/user/amansinghej74/"><img src="icons/gfg.svg" alt=""></a>
             </div>
           </div>
           <div class="stats">
@@ -55,7 +57,7 @@
             </div>
           </div>
         </div>
-        <div class="myImg"><img src="" alt="" /></div>
+        <div class="myImg"><img src="main.png" alt="" /></div>
       </div>
     </section>
     <section class="experience" id="experience">
@@ -265,69 +267,59 @@
     <section class="projects" id="projects">
       <h2 class="sectionHeading">Projects</h2>
       <div class="work-container">
-        <!-- Slide 2: WealthWise Project -->
+        <!-- Landing Page Design for Clothing website-->
         <div class="slide">
           <div class="workDetails">
-            <h3>WealthWise – Personal Finance Tracker</h3>
-            <p>
-              An app that gamifies saving and budgeting to 
-            </p>
-            <p class="techUsed">React, Firebase, Node.js</p>
+            <h3> Landing Page Design for Clothing website</h3>
+            <p class="techUsed">Figma, Illustrator</p>
             <div class="links">
-              <button>Explore More</button>
+              <a target="_blank" href="https://www.behance.net/gallery/223739447/Fashion-Landing-Page-Design/modules/1278014925"><button>Explore More</button></a>
             </div>
           </div>
-          <div class="workImage"><img src="skillUp.jpg" alt="" /></div>
+          <div class="workImage"><img src="projects/fashion.png" alt="" /></div>
         </div>
 
-         <!-- Slide 2: WealthWise Project -->
-         <div class="slide">
+        <!-- Pizza Bill Generator Using Java and Swing-->
+        <div class="slide">
           <div class="workDetails">
-            <h3>WealthWise – Personal Finance Tracker</h3>
-            <p>
-              An app that gamifies saving and budgeting to
-            </p>
-            <p class="techUsed">React, Firebase, Node.js</p>
+            <h3>Pizza Bill Generator Using Java and Swing</h3>
+            <p class="techUsed">Java, Swing</p>
             <div class="links">
-              <button>Explore More</button>
+              <a target="_blank" href="https://github.com/amansingh8052/pizza-bill-generator#"><button>Explore More</button></a>
             </div>
           </div>
-          <div class="workImage"><img src="skillUp.jpg" alt="" /></div>
+          <div class="workImage"><img src="projects/pizza.png" alt="" /></div>
         </div>
+         
 
-          <!-- Slide 2: WealthWise Project -->
+          <!-- Infinite Oddysse - A Travel Guide Website -->
           <div class="slide">
             <div class="workDetails">
-              <h3>WealthWise – Personal Finance Tracker</h3>
-              <p>
-                An app that gamifies saving and budgeting 
-              </p>
-              <p class="techUsed">React, Firebase, Node.js</p>
+              <h3>Infinite Oddysse - A Travel Guide Website</h3>
+              <p class="techUsed">React</p>
               <div class="links">
-                <button>Explore More</button>
+                <a target="_blank" href="https://67075b28cd8b3565ea573f94--infiniteodyssey.netlify.app/"><button>Explore More</button></a>
               </div>
             </div>
-            <div class="workImage"><img src="skillUp.jpg" alt="" /></div>
+            <div class="workImage"><img src="projects/infinite.png" alt="" /></div>
           </div>
 
-            <!-- Slide 2: WealthWise Project -->
+            <!-- Flowra - A Nursury,s Landing Page Website-->
          <div class="slide">
           <div class="workDetails">
-            <h3>WealthWise – Personal Finance Tracker</h3>
-            <p>
-              An app that gamifies saving and budgeting t
-            </p>
-            <p class="techUsed">React, Firebase, Node.js</p>
+            <h3>Flowra - A Nursury,s Landing Page Website</h3>
+            <p class="techUsed">HTML, CSS, Javascript</p>
             <div class="links">
-              <button>Explore More</button>
+                <a target="_blank" href="https://amansingh8052.github.io/nursery/"><button>Explore More</button></a>
             </div>
           </div>
-          <div class="workImage"><img src="skillUp.jpg" alt="" /></div>
+          <div class="workImage"><img src="projects/garden.png" alt="" /></div>
         </div>
+
 </div>
         <div class="load-more-container">
           <a href="all-projects.html">
-            <button class="load-more-btn">Load More Projects</button>
+            <button class="load-more-btn">Load More</button>
           </a>
         </div>
 
@@ -394,6 +386,7 @@
       </div>
     </section>
 <footer>@Portfolio Aman Singh</footer>
+<script src="https://kit.fontawesome.com/8f218c5ee4.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script src="script.js"></script>
   </body>

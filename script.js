@@ -19,6 +19,12 @@ window.addEventListener("scroll", () => {
   });
 });
 
+const toggleBtn = document.getElementById('menu-toggle');
+  const navMenu = document.getElementById('nav-menu');
+
+  toggleBtn.addEventListener('click', () => {
+    navMenu.classList.toggle('show');
+  });
 
 const typed = new Typed('#greeting', {
   strings: ["Hello!"],
@@ -32,3 +38,6 @@ const type = new Typed('#servicesList', {
   backSpeed: 100,
   loop: true
 });
+
+
+
